@@ -1,1 +1,1 @@
-Rock Paper Scissors classic game
+<b>Rock Paper Scissors Lizard Spock</b> classic game: <a href="https://en.wikipedia.org/wiki/File:Rock_paper_scissors_lizard_spock.png">info</href>
