@@ -61,14 +61,14 @@ function dropGameScore() {
 }
 
 function checkForVictory() {
-    if (userScore === TRY_NUMBER + 1)
+    if (userScore === TRY_NUMBER)
     {
         globalUserScore++;
         global_user_score_div.innerHTML = globalUserScore;
         dropGameScore();
         result_p.innerHTML = `You've destroyed AI in Rock Scissors Paper Lizard Spock game! Maybe <u>try again</u>?`
-    }
-    if (computerScore === TRY_NUMBER + 1) {
+    } else
+    if (computerScore === TRY_NUMBER) {
         globalCompScore++;
         global_comp_score_div.innerHTML = globalCompScore;
         dropGameScore();
