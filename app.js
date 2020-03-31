@@ -66,7 +66,13 @@ function checkForVictory() {
         globalUserScore++;
         global_user_score_div.innerHTML = globalUserScore;
         dropGameScore();
-        result_p.innerHTML = `You've destroyed AI in Rock Scissors Paper Lizard Spock game! Maybe <u>try again</u>?`
+        result_p.innerHTML = `You've destroyed AI in Rock Scissors Paper Lizard Spock game! Maybe <u>try again</u>?`;
+        const random = Math.floor(Math.random() * 20);
+        if (random <=3 ) {
+            alert("Success!");
+            alert("Congratulations!");
+            alert("Wow! So good!");
+        }
     } else
     if (computerScore === TRY_NUMBER) {
         globalCompScore++;
