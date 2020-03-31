@@ -16,12 +16,24 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+function changeScoreBorderColour() {
+    console.log("help");
+    if (userScore > computerScore) {
+        scoreBoard_div.setAttribute("style", "border-color: green");
+    } else if (computerScore > userScore) {
+        scoreBoard_div.setAttribute("style", "border-color: red");
+    } else {
+        scoreBoard_div.setAttribute("style", "border-color: white");
+    }
+}
+
 function convertToWord(result) {
     return result === "r" ? "Rock" : result === "p" ? "Paper" : "Scissors";
 }
 
 function win(userChoice, computerChoice) {
     userScore++;
+    changeScoreBorderColour();
     userScore_span.innerHTML = userScore;
     const smallUserWorld = "user".fontsize(2).sup();
     const smallCompWorld = "comp".fontsize(2).sup();
@@ -37,6 +49,7 @@ function win(userChoice, computerChoice) {
 
 function lose(userChoice, computerChoice) {
     computerScore++;
+    changeScoreBorderColour();
     computerScore_span.innerHTML = computerScore;
     const smallUserWorld = "user".fontsize(2).sup();
     const smallCompWorld = "comp".fontsize(2).sup();
@@ -52,6 +65,7 @@ function lose(userChoice, computerChoice) {
 function draw(userChoice, computerChoice) {
     const smallUserWorld = "user".fontsize(2).sup();
     const smallCompWorld = "comp".fontsize(2).sup();
+    changeScoreBorderColour();
 
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} draws with ${convertToWord(computerChoice)}${smallCompWorld}. 🔥 Keep fighting! 🔥`;
 
@@ -60,6 +74,7 @@ function draw(userChoice, computerChoice) {
     setTimeout(function () { // no labmda here just because
         userChoiceClassList_div.remove("grey-glow");
     }, BORDER_FLASH_TIMEOUT);
+
 }
 
 function game(userChoice) {

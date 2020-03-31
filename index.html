@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors Lizard Spock</title>
 </head>
 <body>
-<header>
-    <h1>Rock Paper Scissors</h1>
+    <header>
+    <h1>Rock-Paper-Scissors-Lizard-Spock</h1>
     <link rel="stylesheet" href="styles.css">
 </header>
 
@@ -17,22 +17,29 @@
 </div>
 
 <div class="result">
-    <p>Paper covers rock. You win!</p>
+    <p>Let's play the game, my friend.</p>
 </div>
 
 <div class="choices">
     <div class="choice" id="r">
-        <img src="images/rock.png" alt="">
-    </div>
-    <div class="choice" id="p">
-        <img src="images/paper.png" alt="">
+        <img class="resize" src="images/rock.png" alt="">
     </div>
     <div class="choice" id="s">
-        <img src="images/scissors.png" alt="">
+        <img class="resize" src="images/scissors.png" alt="">
     </div>
-
-    <p id="action-message">Make your move</p>
+    <div class="choice" id="p">
+        <img class="resize" src="images/paper.png" alt="">
+    </div>
 </div>
+<div class="choices">
+    <div class="choice" id="l">
+        <img class="resize" src="images/lizard.png" alt="">
+    </div>
+    <div class="choice" id="spock">
+        <img class="resize" src="images/spock.png" alt="">
+    </div>
+</div>
+    <p id="action-message">Make your move</p>
     <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
