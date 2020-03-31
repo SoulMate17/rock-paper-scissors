@@ -70,7 +70,7 @@ function win(userChoice, computerChoice) {
     changeScoreBorderColour();
     userScore_span.innerHTML = userScore;
 
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} ${mapChoiceToWinAction(userChoice, computerChoice)} ${convertToWord(computerChoice)}${smallCompWorld}. 🔥 You win 🔥`; // simple concatenation replacement
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} ${mapChoiceToWinAction(userChoice, computerChoice)} ${convertToWord(computerChoice)}${smallCompWorld}. You win 🔥`; // simple concatenation replacement
 
     const userChoiceClassList_div = document.getElementById(userChoice).classList;
     userChoiceClassList_div.add("green-glow");
@@ -84,7 +84,7 @@ function lose(userChoice, computerChoice) {
     changeScoreBorderColour();
     computerScore_span.innerHTML = computerScore;
 
-    result_p.innerHTML = `${convertToWord(computerChoice)}${smallCompWorld} ${mapChoiceToWinAction(computerChoice, userChoice)} ${convertToWord(userChoice)}${smallUserWorld}. You lost 😢`;
+    result_p.innerHTML = `${convertToWord(computerChoice)}${smallCompWorld} ${mapChoiceToWinAction(computerChoice, userChoice)} ${convertToWord(userChoice)}${smallUserWorld}. You lost 💩`;
 
     const userChoiceClassList_div = document.getElementById(userChoice).classList;
     userChoiceClassList_div.add("red-glow");
@@ -94,7 +94,7 @@ function lose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
     changeScoreBorderColour();
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} draws with ${convertToWord(computerChoice)}${smallCompWorld}. 💩 Keep fighting! 💩`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} draws with ${convertToWord(computerChoice)}${smallCompWorld}. Keep fighting (ง'̀-'́)ง`;
 
     const userChoiceClassList_div = document.getElementById(userChoice).classList;
     userChoiceClassList_div.add("grey-glow");
